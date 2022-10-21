@@ -1,0 +1,80 @@
+CASO 3
+    pedido()
+ fimescolha
+fimprocedimento
+
+
+procedimento pedido()
+inicio
+limpatela
+
+repita
+ limpatela
+ escreval("tipos de pizza ")
+ escreval(" (1) -> incluir no pedido Pizza meio a meio")
+ escreval(" (2) -> incluir no pedido uma Pizza inteira")
+ escreval(" (3) -> incluir no pedido uma Bebida")
+ escreval("")
+ leia (m_a_m)
+     se  (m_a_m = "1") entao
+          limpatela
+          escreval("Escolha 2 sabores para a pizza meio a meio")
+          escreval("")
+          escreval("(1) - Pizza de mussarela -> 20,00 R$")
+          escreval("Ingredientes: Mussarela e Oregano")
+          escreval("")
+          escreval("(2) - Pizza de calabressa -> 21,00 R$)
+          escreval("Ingredientes: Mussarela e Calabresa fatiadas")
+          escreval("")
+          escreval("(3) - Pizza de peperoni -> 25,00 R$")
+          escreval("Ingredientes: Mussarela e salame peperoni")
+          escreval("")
+          repita
+            leia(P_mam)
+            escolha (P_mam)
+            caso 1
+              valorpizzameio <- valorpizzameio + 40/2
+              tempoentrega <- tempoentrega + 1
+              metade<- metade + 1
+              m_piz_1 <- "Meia pizza de mussarela -> 20,00 R$"
+              m_qtd_1 <- 1 + m_qtd_1
+              m_c_1 <- 1
+            caso 2
+              valorpizzameio <- valorpizzameio + 42/2
+              tempoentrega <- tempoentrega + 2
+              metade<- metade + 1
+              m_piz_2 <- "Meia pizza de calabresa -> 21,00 R$"
+              m_qtd_2 <- 1 + m_qtd_2
+              m_c_2 <- 1
+            caso 3
+              valorpizzameio <- valorpizzameio + 50/2
+              tempoentrega <- tempoentrega + 1
+              metade<- metade + 1
+              m_piz_3 <- "Meia pizza de peperoni -> 25,00 R$"
+              m_qtd_3 <- 1 + m_qtd_3
+              m_c_3 <- 1
+            outrocaso
+              escreval("Escolha um código válido")
+            fimescolha
+          ate metade = 2
+          metade<-0
+          escreval("")
+          escreval("Deseja finalizar o pedido?")
+          escreval("  (1) = SIM   |  (2) = NÃO")
+          leia  (pedido)
+     fimse
+     
+     //zerar contadores de pizza para novos pedidos
+     se (m_a_m = "2") então
+        limpatela
+        escreval("")
+        escreval("(1) = pizza de Mussarela -> 40,00 R$")
+        escreval("Ingredientes: Mussarela e Oregano")
+        escreval("")
+        escreval("(2) - Pizza de Calabresa -> 50,00 R$")
+        escreval("")
+        escreval("(3) - Pizza de Peperoni -> 50,00 R$")
+        escreval("Ingredientes; Mussarela e Salame Peperoni")
+        escreval("")
+        leia(p_int)
+        escolha (p_int)
